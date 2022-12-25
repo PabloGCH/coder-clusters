@@ -6,8 +6,8 @@
 	"scripts": {
 		"test": "nodemon src/server.ts",
 		"start": "ts-node src/server.ts",
-		"watch": "tsc -W",
-		"build": "tsc"
+		"start-fork": "nodemon src/server.ts -p 4000 -m FORK",
+		"start-cluster": "nodemon src/server.ts -p 4000 -m CLUSTER"
 	},
 	"author": "",
 	"license": "ISC",
