@@ -7,7 +7,12 @@
 		"test": "nodemon src/server.ts",
 		"start": "ts-node src/server.ts",
 		"start-fork": "nodemon src/server.ts -p 4000 -m FORK",
-		"start-cluster": "nodemon src/server.ts -p 4000 -m CLUSTER"
+		"start-cluster": "nodemon src/server.ts -p 4000 -m CLUSTER",
+		"forever-fork": "forever start dist/server.js -p 4000",
+		"forever-cluster": "forever start dist/server.js -p 4000 -m CLUSTER",
+		"pm2-fork": "pm2 start dist/server.js -i 0 -p 4000",
+		"pm2-cluster": "pm2 start dist/server.js -i 0 -p 4000 -m CLUSTER",
+		"build": "tsc"
 	},
 	"author": "",
 	"license": "ISC",
